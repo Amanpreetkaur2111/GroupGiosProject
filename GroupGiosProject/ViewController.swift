@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var BookNowButton: UIButton!
+    
+    @IBOutlet var Segment: UISegmentedControl!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        BookNowButton.isHidden = false
+        Segment.isHidden = true
         
         assignbackground()
     }
@@ -27,5 +36,15 @@ class ViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
     }
+    
+    
+    @IBAction func BookNow(_ sender: UIButton) {
+        
+        BookNowButton.isHidden = false
+        Segment.isHidden = false
+        
+    }
+    
+    
 }
 

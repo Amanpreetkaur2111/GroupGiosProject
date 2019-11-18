@@ -52,12 +52,19 @@
                                 <state key="normal" title="Book Now">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="BookNow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BD8-SO-xdW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vxh-oI-5iT"/>
+                    <connections>
+                        <outlet property="BookNowButton" destination="2aK-IK-EJB" id="zoq-nA-2hP"/>
+                        <outlet property="Segment" destination="FGh-0A-JAd" id="rsW-Fo-GS9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
