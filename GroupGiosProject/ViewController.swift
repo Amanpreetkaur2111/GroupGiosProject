@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("hlo")
         
         BookNowButton.isHidden = false
         Segment.isHidden = true
