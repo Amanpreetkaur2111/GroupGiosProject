@@ -12,20 +12,19 @@ class ViewController: UIViewController {
 
     @IBOutlet var BookNowButton: UIButton!
     
-    @IBOutlet var Segment: UISegmentedControl!
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("hlo")
-        
+    
         BookNowButton.isHidden = false
-        Segment.isHidden = true
-        
         assignbackground()
     }
+    
+    
      func assignbackground(){
         let background = UIImage(named: "hotel pic")
         var imageView : UIImageView!
@@ -38,14 +37,7 @@ class ViewController: UIViewController {
         self.view.sendSubviewToBack(imageView)
     }
     
-    
-    @IBAction func BookNow(_ sender: UIButton) {
-        
-        BookNowButton.isHidden = false
-        Segment.isHidden = false
-        
-    }
-    
+ 
     
 }
 
