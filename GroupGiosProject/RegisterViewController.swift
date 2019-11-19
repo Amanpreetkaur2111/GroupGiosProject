@@ -12,19 +12,20 @@ class RegisterViewController: UIViewController
 {
 
     
-    @IBOutlet var FirstNameLabel: UILabel!
+    
+    @IBOutlet var UserNameLabel: UILabel!
     @IBOutlet var PasswordLabel: UILabel!
     @IBOutlet var EmailLabel: UILabel!
     @IBOutlet var PhoneLabel: UILabel!
     
     
     @IBOutlet var segmentCon: UISegmentedControl!
-    @IBOutlet var FirstNameTF: UITextField!
+    @IBOutlet var UserNameTF: UITextField!
     @IBOutlet var PasswordTF: UITextField!
     @IBOutlet var EmailTF: UITextField!
     @IBOutlet var PhoneTF: UITextField!
     
-    @IBOutlet var TopLabel: UILabel!
+    
     @IBOutlet var RegisterButton: UIButton!
     
     
@@ -35,7 +36,7 @@ class RegisterViewController: UIViewController
 
         // Do any additional setup after loading the view.
         segmentCon.isHidden = false
-        TopLabel.isHidden = true
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
         self.view.addGestureRecognizer(tapGesture)
     }
@@ -44,11 +45,12 @@ class RegisterViewController: UIViewController
     
     @objc func viewtapped()
     {
-        FirstNameTF.resignFirstResponder()
+        UserNameTF.resignFirstResponder()
         PasswordTF.resignFirstResponder()
         EmailTF.resignFirstResponder()
         PhoneTF.resignFirstResponder()
     }
+    
     
     
     @IBAction func SegmentControl(_ sender: UISegmentedControl)
@@ -56,9 +58,9 @@ class RegisterViewController: UIViewController
         let value = sender.selectedSegmentIndex
         if value == 0
         {
-            TopLabel.isHidden = false
-            FirstNameLabel.isHidden = false
-            FirstNameTF.isHidden = false
+            
+            UserNameLabel.isHidden = false
+            UserNameTF.isHidden = false
             PasswordLabel.isHidden = false
             PasswordTF.isHidden = false
             RegisterButton.isHidden = false
@@ -66,12 +68,20 @@ class RegisterViewController: UIViewController
             EmailTF.isHidden = true
             PhoneTF.isHidden = true
             PhoneLabel.isHidden = true
+            RegisterButton.setTitle("SignIn", for: .normal)
+            
+            
+            
+            
+            
+            
+        
         }
         else
         {
-            TopLabel.isHidden = false
-            FirstNameLabel.isHidden = false
-            FirstNameTF.isHidden = false
+           
+            UserNameLabel.isHidden = false
+            UserNameTF.isHidden = false
             PasswordLabel.isHidden = false
             PasswordTF.isHidden = false
             RegisterButton.isHidden = false
@@ -79,8 +89,34 @@ class RegisterViewController: UIViewController
             EmailTF.isHidden = false
             PhoneTF.isHidden = false
             PhoneLabel.isHidden = false
+            RegisterButton.setTitle("Register", for: .normal)
         }
     }
+    
+    @IBAction func Register(_ sender: UIButton)
+    {
+        let username = UserNameTF.text
+        let password = PasswordTF.text
+        let email = EmailTF.text
+        let phone = PhoneTF.text
+        
+        let user = Users(userName: username!, Password: password!, Email: email!, Phone: phone!)
+        users.append(user)
+        UserNameTF.text = nil
+        PasswordTF.text = nil
+        EmailTF.text = nil
+        PhoneTF.text = nil
+    }
+    
+//    @IBAction func Display(_ sender: Any)
+//    {
+//        for item in users
+//        {
+//            print(item)
+//        }
+//    }
+    
+    
     
     
     /*
