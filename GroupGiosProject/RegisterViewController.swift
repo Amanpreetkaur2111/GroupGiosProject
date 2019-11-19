@@ -27,7 +27,7 @@ class RegisterViewController: UIViewController
     
     
     @IBOutlet var RegisterButton: UIButton!
-    
+    @IBOutlet var SignInButton: UIButton!
     
     
     override func viewDidLoad()
@@ -68,17 +68,11 @@ class RegisterViewController: UIViewController
             EmailTF.isHidden = true
             PhoneTF.isHidden = true
             PhoneLabel.isHidden = true
-            RegisterButton.setTitle("SignIn", for: .normal)
-            
-            
-            
-            
-            
-            
-        
-        }
+            SignInButton.isHidden = false
+            RegisterButton.isHidden = true
+            }
         else
-        {
+            {
            
             UserNameLabel.isHidden = false
             UserNameTF.isHidden = false
@@ -89,7 +83,10 @@ class RegisterViewController: UIViewController
             EmailTF.isHidden = false
             PhoneTF.isHidden = false
             PhoneLabel.isHidden = false
-            RegisterButton.setTitle("Register", for: .normal)
+            SignInButton.isHidden = true
+            RegisterButton.isHidden = false
+                
+           
         }
     }
     
@@ -101,12 +98,58 @@ class RegisterViewController: UIViewController
         let phone = PhoneTF.text
         
         let user = Users(userName: username!, Password: password!, Email: email!, Phone: phone!)
-        users.append(user)
-        UserNameTF.text = nil
-        PasswordTF.text = nil
-        EmailTF.text = nil
-        PhoneTF.text = nil
+        
+        var isExist = false
+        for i in Users.usersData
+        {
+        if username == i.userName
+        {
+        isExist = true
+        }
+            
+        }
+        
+        if isExist
+        {
+            let alert = UIAlertController(title: "UserName already exists", message: "Enter another UserName", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert,animated: true,completion: nil)
+        }
+        else
+        {
+            Users.usersData.append(user)
+            UserNameTF.text = nil
+            PasswordTF.text = nil
+            EmailTF.text = nil
+            PhoneTF.text = nil
+         }
     }
+    
+    @IBAction func signIn(_ sender: UIButton)
+    {
+        
+        let username = UserNameTF.text
+        var isExist = false
+        for i in Users.usersData
+        {
+        if username == i.userName
+        {
+        isExist = true
+        }
+            
+        }
+        
+        if !isExist
+        {
+            let alert = UIAlertController(title: "UserName does not exist", message: "SignUp for new account", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert,animated: true,completion: nil)
+        }
+        
+    }
+    
+    
+    
     
 //    @IBAction func Display(_ sender: Any)
 //    {

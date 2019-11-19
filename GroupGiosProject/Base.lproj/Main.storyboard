@@ -133,9 +133,10 @@
                                 <rect key="frame" x="99" y="501" width="176" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="Register:" destination="OVC-IG-K6h" eventType="touchUpInside" id="HRX-Fj-Nhp"/>
@@ -152,6 +153,19 @@
                                     <action selector="SegmentControl:" destination="OVC-IG-K6h" eventType="valueChanged" id="rJJ-P4-WZr"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NY6-Jf-EaD">
+                                <rect key="frame" x="106" y="503" width="162" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="SignIn">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="signIn:" destination="OVC-IG-K6h" eventType="touchUpInside" id="kGa-99-jfF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="V4R-UJ-V0p"/>
@@ -165,6 +179,7 @@
                         <outlet property="PhoneLabel" destination="STC-hv-Jau" id="iLy-4d-0pQ"/>
                         <outlet property="PhoneTF" destination="54k-OZ-uLK" id="Dvq-RH-qRh"/>
                         <outlet property="RegisterButton" destination="gMd-qj-aPj" id="UBx-Mb-310"/>
+                        <outlet property="SignInButton" destination="NY6-Jf-EaD" id="ja0-jZ-kai"/>
                         <outlet property="UserNameLabel" destination="I1z-BQ-bDH" id="peG-bT-lbk"/>
                         <outlet property="UserNameTF" destination="MhA-Vv-DL2" id="EpQ-ZQ-RBE"/>
                         <outlet property="segmentCon" destination="iv0-my-h2l" id="JG4-E5-qRv"/>

@@ -14,6 +14,6 @@ struct Users
     var Password: String
     var Email: String
     var Phone: String
-    
+    static var usersData = [Users]()
 }
-var users = [Users]()
+  
