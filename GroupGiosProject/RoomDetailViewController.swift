@@ -12,16 +12,52 @@ class RoomDetailViewController: UIViewController {
 
     @IBOutlet var room_Image: UIImageView!
     
+    
+    @IBOutlet var CheckIn: UITextField!
+    
+    @IBOutlet var CheckOut: UITextField!
+    
+    private var datepicker: UIDatePicker?
+    
     var RoomDelegate: PictureViewController?
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        datepicker = UIDatePicker()
+        datepicker?.datePickerMode = .date
+        
+        datepicker?.addTarget(self, action: #selector(RoomDetailViewController.dateChanged(datePicker:)), for: .valueChanged)
+        
+        let tapGester = UITapGestureRecognizer(target: self, action: #selector(RoomDetailViewController.viewTapped(gestureRecognizer:)))
+            view.addGestureRecognizer(tapGester)
+       CheckIn.inputView = datepicker
+        CheckOut.inputView = datepicker
 
-        var i_name =  RoomDelegate!.cuurentImageName
+
+        let i_name =  RoomDelegate!.cuurentImageName
         room_Image.image = UIImage(named: i_name)
         // Do any additional setup after loading the view.
     }
     
-
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer)
+    {
+        view.endEditing(true)
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker)
+    {
+        let Dateformatter = DateFormatter()
+        Dateformatter.dateFormat = "MM/dd/yyyy"
+        CheckIn.text = Dateformatter.string(from: datepicker!.date)
+        CheckOut.text = Dateformatter.string(from: datepicker!.date)
+        view.endEditing(true)
+        
+    }
+//    override func didReceiveMemoryWarning()
+//    {
+//        super.didReceiveMemoryWarning()
+//    }
     /*
     // MARK: - Navigation
 
