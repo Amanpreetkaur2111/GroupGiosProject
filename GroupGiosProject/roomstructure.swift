@@ -7,6 +7,7 @@
 //
 
 import Foundation
-struct rooms {
+struct Rooms
+{
     static var roomTypes = ["Single","Double","Cabana","Stereo"]
 }

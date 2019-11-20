@@ -31,22 +31,22 @@ class RoomTypeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return rooms.roomTypes.count
+        return Rooms.roomTypes.count
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
- if let cell = tableView.dequeueReusableCell(withIdentifier: "Room")
-  {
-    cell.textLabel?.text = rooms.roomTypes[indexPath.row]
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "Room")
+    {
+    cell.textLabel?.text = Rooms.roomTypes[indexPath.row]
     
-     return cell
+    return cell
             
-        }
+    }
 
         // Configure the cell...
-
-        return UITableViewCell()
+    return UITableViewCell()
     }
     
 
@@ -85,14 +85,22 @@ class RoomTypeTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+       if let PictureView = segue.destination as? PictureViewController
+       {
+        PictureView.ImageDelegate = self
+       }
+        
+        if let cell = sender as? UITableViewCell
+        {
+            RType = tableView.indexPath(for: cell)!.row
+        }
+    
     }
-    */
-
 }

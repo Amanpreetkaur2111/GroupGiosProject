@@ -17,6 +17,9 @@
 		9B56B67223832875002AED67 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B56B67123832875002AED67 /* background.jpg */; };
 		9B56B67623832F8B002AED67 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B56B67523832F8A002AED67 /* logo.jpg */; };
 		9B88DC4623834CB000B34B3E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88DC4523834CB000B34B3E /* RegisterViewController.swift */; };
+		9B9E86D5238597C100102C3B /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E86D4238597C100102C3B /* PictureViewController.swift */; };
+		9B9E86D723859B4500102C3B /* roomimages in Resources */ = {isa = PBXBuildFile; fileRef = 9B9E86D623859B4500102C3B /* roomimages */; };
+		9B9E86DB2385A62000102C3B /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E86DA2385A62000102C3B /* Picture.swift */; };
 		9BA8E6962384B1A4005B4D6B /* RoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8E6952384B1A4005B4D6B /* RoomTypeTableViewController.swift */; };
 		9BA8E6982384B306005B4D6B /* roomstructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8E6972384B306005B4D6B /* roomstructure.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +37,9 @@
 		9B56B67123832875002AED67 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		9B56B67523832F8A002AED67 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		9B88DC4523834CB000B34B3E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9B9E86D4238597C100102C3B /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		9B9E86D623859B4500102C3B /* roomimages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = roomimages; sourceTree = "<group>"; };
+		9B9E86DA2385A62000102C3B /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		9BA8E6952384B1A4005B4D6B /* RoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTypeTableViewController.swift; sourceTree = "<group>"; };
 		9BA8E6972384B306005B4D6B /* roomstructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roomstructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +74,7 @@
 		9B56B65C238323F7002AED67 /* GroupGiosProject */ = {
 			isa = PBXGroup;
 			children = (
+				9B9E86D623859B4500102C3B /* roomimages */,
 				9B56B67523832F8A002AED67 /* logo.jpg */,
 				9B56B67123832875002AED67 /* background.jpg */,
 				9B56B65D238323F7002AED67 /* AppDelegate.swift */,
@@ -80,7 +87,9 @@
 				9B56B668238323F7002AED67 /* LaunchScreen.storyboard */,
 				9B56B66B238323F7002AED67 /* Info.plist */,
 				9BA8E6952384B1A4005B4D6B /* RoomTypeTableViewController.swift */,
+				9B9E86D4238597C100102C3B /* PictureViewController.swift */,
 				9BA8E6972384B306005B4D6B /* roomstructure.swift */,
+				9B9E86DA2385A62000102C3B /* Picture.swift */,
 			);
 			path = GroupGiosProject;
 			sourceTree = "<group>";
@@ -144,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B56B66A238323F7002AED67 /* LaunchScreen.storyboard in Resources */,
+				9B9E86D723859B4500102C3B /* roomimages in Resources */,
 				9B56B67623832F8B002AED67 /* logo.jpg in Resources */,
 				9B56B67223832875002AED67 /* background.jpg in Resources */,
 				9B56B667238323F7002AED67 /* Assets.xcassets in Resources */,
@@ -158,7 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9E86DB2385A62000102C3B /* Picture.swift in Sources */,
 				9B56B662238323F7002AED67 /* ViewController.swift in Sources */,
+				9B9E86D5238597C100102C3B /* PictureViewController.swift in Sources */,
 				9B56B65E238323F7002AED67 /* AppDelegate.swift in Sources */,
 				9BA8E6982384B306005B4D6B /* roomstructure.swift in Sources */,
 				9B02252D2384587700694AAF /* Users.swift in Sources */,
