@@ -14,4 +14,11 @@ class Picture: UICollectionViewCell
     
     @IBOutlet var Images: UIImageView!
     
+//    func setImage(s: String){
+//
+//        Images.image = UIImage(named: s)
+//
+//    }
+
+    
 }

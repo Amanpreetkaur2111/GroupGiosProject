@@ -95,12 +95,15 @@ class RoomTypeTableViewController: UITableViewController {
        if let PictureView = segue.destination as? PictureViewController
        {
         PictureView.ImageDelegate = self
-       }
         
         if let cell = sender as? UITableViewCell
         {
             RType = tableView.indexPath(for: cell)!.row
         }
+        
+       }
+        
+        
     
     }
 }
