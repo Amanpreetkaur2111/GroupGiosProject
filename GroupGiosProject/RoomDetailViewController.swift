@@ -13,6 +13,7 @@ class RoomDetailViewController: UIViewController {
     @IBOutlet var room_Image: UIImageView!
     
     
+    @IBOutlet var price_Label: UILabel!
     @IBOutlet var CheckIn: UITextField!
     
     @IBOutlet var CheckOut: UITextField!
@@ -48,6 +49,11 @@ class RoomDetailViewController: UIViewController {
        
         let i_name =  RoomDelegate!.cuurentImageName
         room_Image.image = UIImage(named: i_name)
+        
+        price_Label.text = RoomDelegate!.Price[(RoomDelegate?.ImageDelegate!.RType)!][RoomDelegate!.currIndex]
+        
+        
+        
         // Do any additional setup after loading the view.
         
         
@@ -91,6 +97,9 @@ class RoomDetailViewController: UIViewController {
            view.endEditing(true)
            
        }
+    
+    
+    
 //    override func didReceiveMemoryWarning()
 //    {
 //        super.didReceiveMemoryWarning()
