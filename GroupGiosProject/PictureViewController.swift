@@ -30,11 +30,12 @@ class PictureViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        print("inside function")
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Picture{
+    
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Picture
+        {
         
             
-            print("cell found")
+            
             
         cell.Images?.image = UIImage(named: ImageArray[ImageDelegate!.RType][indexPath.row])
             return cell
