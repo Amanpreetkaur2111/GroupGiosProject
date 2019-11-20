@@ -36,14 +36,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lhd-wk-0Yy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lhd-wk-0Yy">
                                 <rect key="frame" x="-10" y="44" width="385" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aK-IK-EJB">
-                                <rect key="frame" x="70" y="77" width="225" height="68"/>
+                                <rect key="frame" x="75" y="525" width="225" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Book Now">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -260,8 +260,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="306" height="326"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="daO-77-P3v">
-                                                    <rect key="frame" x="25" y="16.390048154100896" width="272" height="295.99999999999989"/>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="daO-77-P3v">
+                                                    <rect key="frame" x="17" y="16" width="272" height="295.99999999999989"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="eIk-wZ-YCQ"/>
                                                         <constraint firstAttribute="width" constant="300" id="uEN-Gg-Zfv"/>
@@ -277,7 +277,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="306" height="326"/>
                                         <connections>
-                                            <outlet property="Images" destination="daO-77-P3v" id="mqt-Oa-vjI"/>
+                                            <outlet property="Images" destination="daO-77-P3v" id="maN-Iv-gcO"/>
+                                            <segue destination="ebD-gt-jqE" kind="presentation" id="tSC-mR-dbV"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -294,11 +295,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EmQ-dq-spG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2109.5999999999999" y="-654.42278860569718"/>
+            <point key="canvasLocation" x="2142" y="-799"/>
+        </scene>
+        <!--Room Detail View Controller-->
+        <scene sceneID="obC-Bt-BxV">
+            <objects>
+                <viewController id="ebD-gt-jqE" customClass="RoomDetailViewController" customModule="GroupGiosProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hZf-Ks-09g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="aIo-CY-h8N"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m3P-gU-4DR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPL-wd-CQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2906" y="-789"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="64" height="52"/>
-        <image name="background.jpg" width="450" height="450"/>
+        <image name="back.jpg" width="1000" height="1500"/>
     </resources>
 </document>

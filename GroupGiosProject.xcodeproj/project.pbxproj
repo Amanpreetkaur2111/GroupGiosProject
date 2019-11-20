@@ -36,6 +36,8 @@
 		9B9E86FC2385B6B000102C3B /* ST.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B9E86EB2385B6AF00102C3B /* ST.jpg */; };
 		9B9E86FD2385B6B000102C3B /* ST4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B9E86EC2385B6AF00102C3B /* ST4.jpg */; };
 		9B9E86FE2385B6B000102C3B /* D4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9B9E86ED2385B6AF00102C3B /* D4.jpeg */; };
+		9B9E87002385C12500102C3B /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E86FF2385C12500102C3B /* RoomDetailViewController.swift */; };
+		9B9E87022385C67F00102C3B /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B9E87012385C67F00102C3B /* back.jpg */; };
 		9BA8E6962384B1A4005B4D6B /* RoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8E6952384B1A4005B4D6B /* RoomTypeTableViewController.swift */; };
 		9BA8E6982384B306005B4D6B /* roomstructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8E6972384B306005B4D6B /* roomstructure.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,8 @@
 		9B9E86EB2385B6AF00102C3B /* ST.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ST.jpg; sourceTree = "<group>"; };
 		9B9E86EC2385B6AF00102C3B /* ST4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ST4.jpg; sourceTree = "<group>"; };
 		9B9E86ED2385B6AF00102C3B /* D4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = D4.jpeg; sourceTree = "<group>"; };
+		9B9E86FF2385C12500102C3B /* RoomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
+		9B9E87012385C67F00102C3B /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
 		9BA8E6952384B1A4005B4D6B /* RoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTypeTableViewController.swift; sourceTree = "<group>"; };
 		9BA8E6972384B306005B4D6B /* roomstructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roomstructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +123,7 @@
 				9B56B668238323F7002AED67 /* LaunchScreen.storyboard */,
 				9B56B66B238323F7002AED67 /* Info.plist */,
 				9BA8E6952384B1A4005B4D6B /* RoomTypeTableViewController.swift */,
+				9B9E86FF2385C12500102C3B /* RoomDetailViewController.swift */,
 				9B9E86D4238597C100102C3B /* PictureViewController.swift */,
 				9BA8E6972384B306005B4D6B /* roomstructure.swift */,
 				9B9E86DA2385A62000102C3B /* Picture.swift */,
@@ -129,6 +134,7 @@
 		9B9E86DC2385B69E00102C3B /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				9B9E87012385C67F00102C3B /* back.jpg */,
 				9B9E86EA2385B6AF00102C3B /* C1.jpg */,
 				9B9E86E72385B6AF00102C3B /* C2.jpg */,
 				9B9E86E32385B6AE00102C3B /* C3.jpg */,
@@ -217,6 +223,7 @@
 				9B9E86FB2385B6B000102C3B /* C1.jpg in Resources */,
 				9B9E86F62385B6B000102C3B /* S3.jpg in Resources */,
 				9B56B67223832875002AED67 /* background.jpg in Resources */,
+				9B9E87022385C67F00102C3B /* back.jpg in Resources */,
 				9B9E86F52385B6B000102C3B /* C4.jpg in Resources */,
 				9B9E86F82385B6B000102C3B /* C2.jpg in Resources */,
 				9B9E86EF2385B6B000102C3B /* D3.jpg in Resources */,
@@ -248,6 +255,7 @@
 				9B02252D2384587700694AAF /* Users.swift in Sources */,
 				9B56B660238323F7002AED67 /* SceneDelegate.swift in Sources */,
 				9BA8E6962384B1A4005B4D6B /* RoomTypeTableViewController.swift in Sources */,
+				9B9E87002385C12500102C3B /* RoomDetailViewController.swift in Sources */,
 				9B88DC4623834CB000B34B3E /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

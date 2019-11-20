@@ -34,10 +34,7 @@ class PictureViewController: UIViewController, UICollectionViewDelegate, UIColle
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Picture
         {
         
-            
-            
-            
-        cell.Images?.image = UIImage(named: ImageArray[ImageDelegate!.RType][indexPath.row])
+            cell.Images?.image = UIImage(named: ImageArray[ImageDelegate!.RType][indexPath.row])
             return cell
             
         }
@@ -48,14 +45,23 @@ class PictureViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let RoomView = segue.destination as? RoomDetailViewController
+        {
+            RoomView.RoomDelegate = self
+        }
+        
+        let cell = sender as? UIViewController
+       //back let index = view.
+        
+        
     }
-    */
+    
 
 }

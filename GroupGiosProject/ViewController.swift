@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     
      func assignbackground(){
-        let background = UIImage(named: "hotel pic")
+        let background = UIImage(named: "back")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode = UIView.ContentMode.scaleAspectFill
