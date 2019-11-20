@@ -10,11 +10,14 @@ import UIKit
 
 class RoomDetailViewController: UIViewController {
 
+    @IBOutlet var room_Image: UIImageView!
     
     var RoomDelegate: PictureViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var i_name =  RoomDelegate!.cuurentImageName
+        room_Image.image = UIImage(named: i_name)
         // Do any additional setup after loading the view.
     }
     

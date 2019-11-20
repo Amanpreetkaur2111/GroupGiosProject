@@ -11,9 +11,11 @@ import UIKit
 class PictureViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
 {
     
+    
+    @IBOutlet var coll_View: UICollectionView!
     var ImageArray = [["S1","S2","S3","S4"],["D1","D2","D3","D4"],["C1","C2","C3","C4"],["ST","ST2","ST3","ST4"]]
     var ImageDelegate: RoomTypeTableViewController?
-    
+    var cuurentImageName = ""
    
     override func viewDidLoad()
     {
@@ -55,9 +57,17 @@ class PictureViewController: UIViewController, UICollectionViewDelegate, UIColle
         if let RoomView = segue.destination as? RoomDetailViewController
         {
             RoomView.RoomDelegate = self
+            
+            if let pic = sender as? Picture{
+               
+                let index = coll_View.indexPath(for: pic)?.row
+                
+                cuurentImageName = ImageArray[ImageDelegate!.RType][index!]
+                
+            }
         }
         
-        let cell = sender as? UIViewController
+        
        //back let index = view.
         
         
