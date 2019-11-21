@@ -318,13 +318,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfj-8u-r8X">
-                                <rect key="frame" x="57" y="235" width="260" height="58"/>
+                                <rect key="frame" x="16" y="235" width="352" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Room Detail">
+                                <state key="normal" title="Room Details">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="TGV-uZ-gKj" kind="show" id="LU4-kV-5sK"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Check In" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zpe-VF-eRp">
                                 <rect key="frame" x="16" y="373" width="154" height="34"/>
@@ -339,9 +342,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrx-XX-kqZ">
-                                <rect key="frame" x="72" y="571" width="230" height="38"/>
+                                <rect key="frame" x="72" y="570" width="230" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="Book">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -354,7 +357,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="aIo-CY-h8N"/>
                     </view>
                     <navigationItem key="navigationItem" id="m3P-gU-4DR"/>
@@ -368,6 +371,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPL-wd-CQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3064.8000000000002" y="-824.43778110944538"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="y8a-Yf-FjD">
+            <objects>
+                <viewController id="TGV-uZ-gKj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GMQ-4b-eIH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ok-lN-1nF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <string key="text">  Facilities Included:  1. Wifi - Connection. 2. Mini Refrigerator. 3. Flat TV Screen. 4. Fitness Center. 5. Breakfast available at    Additional Cost. </string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="n5F-eO-qMh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O4b-xx-Ebl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XS1-Oy-ozh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3936.8000000000002" y="-879.31034482758628"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="at0-xO-QaQ">
@@ -437,7 +467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pw-By-qQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4010" y="-725"/>
+            <point key="canvasLocation" x="4665" y="-758"/>
         </scene>
     </scenes>
     <resources>
