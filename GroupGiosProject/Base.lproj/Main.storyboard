@@ -364,16 +364,17 @@
             </objects>
             <point key="canvasLocation" x="2949.5999999999999" y="-826.23688155922048"/>
         </scene>
-        <!--View Controller-->
+        <!--Text View Controller-->
         <scene sceneID="at0-xO-QaQ">
             <objects>
-                <viewController id="Dqa-v9-qYG" sceneMemberID="viewController">
+                <viewController id="Dqa-v9-qYG" customClass="TextViewController" customModule="GroupGiosProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SN7-r2-4jb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0NP-3g-yfI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LHx-OI-acZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pw-By-qQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

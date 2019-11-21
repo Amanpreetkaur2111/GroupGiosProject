@@ -36,6 +36,16 @@ class RegisterViewController: UIViewController
         
         // Do any additional setup after loading the view.
         segmentCon.isHidden = false
+        UserNameLabel.isHidden = false
+        UserNameTF.isHidden = false
+        PasswordLabel.isHidden = false
+        PasswordTF.isHidden = false
+        EmailLabel.isHidden = true
+        EmailTF.isHidden = true
+        PhoneTF.isHidden = true
+        PhoneLabel.isHidden = true
+        SignInButton.isHidden = false
+        RegisterButton.isHidden = true
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
         self.view.addGestureRecognizer(tapGesture)
@@ -145,6 +155,9 @@ class RegisterViewController: UIViewController
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alert,animated: true,completion: nil)
         }
+        
+        
+        
         
     }
     
