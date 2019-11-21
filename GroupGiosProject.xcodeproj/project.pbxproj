@@ -17,6 +17,7 @@
 		9B56B67223832875002AED67 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B56B67123832875002AED67 /* background.jpg */; };
 		9B56B67623832F8B002AED67 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B56B67523832F8A002AED67 /* logo.jpg */; };
 		9B75BC9323870B09003E02F5 /* b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B75BC9223870B09003E02F5 /* b.jpg */; };
+		9B75BC952387471F003E02F5 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B75BC942387471F003E02F5 /* win.mp3 */; };
 		9B88DC4623834CB000B34B3E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88DC4523834CB000B34B3E /* RegisterViewController.swift */; };
 		9B9E86D5238597C100102C3B /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E86D4238597C100102C3B /* PictureViewController.swift */; };
 		9B9E86DB2385A62000102C3B /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E86DA2385A62000102C3B /* Picture.swift */; };
@@ -56,6 +57,7 @@
 		9B56B67123832875002AED67 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		9B56B67523832F8A002AED67 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		9B75BC9223870B09003E02F5 /* b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b.jpg; sourceTree = "<group>"; };
+		9B75BC942387471F003E02F5 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 		9B88DC4523834CB000B34B3E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9B9E86D4238597C100102C3B /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		9B9E86DA2385A62000102C3B /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		9B9E86DC2385B69E00102C3B /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				9B75BC942387471F003E02F5 /* win.mp3 */,
 				9B75BC9223870B09003E02F5 /* b.jpg */,
 				9B9E87012385C67F00102C3B /* back.jpg */,
 				9B9E86EA2385B6AF00102C3B /* C1.jpg */,
@@ -232,6 +235,7 @@
 				9B9E86F82385B6B000102C3B /* C2.jpg in Resources */,
 				9B9E86EF2385B6B000102C3B /* D3.jpg in Resources */,
 				9B9E86F92385B6B000102C3B /* S4.jpg in Resources */,
+				9B75BC952387471F003E02F5 /* win.mp3 in Resources */,
 				9B9E86F32385B6B000102C3B /* ST3.jpeg in Resources */,
 				9B9E86F72385B6B000102C3B /* D1.jpg in Resources */,
 				9B9E86F12385B6B000102C3B /* tick.png in Resources */,

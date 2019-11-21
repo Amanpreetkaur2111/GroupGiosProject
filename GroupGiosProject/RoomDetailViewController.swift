@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RoomDetailViewController: UIViewController {
-
+var audioplayer: AVAudioPlayer!
     @IBOutlet var room_Image: UIImageView!
     
     
@@ -99,6 +100,11 @@ class RoomDetailViewController: UIViewController {
        }
     
     
+    @IBAction func booksound(_ sender: UIButton) {
+    let soundURL = Bundle.main.url(forResource: "win", withExtension: "mp3")
+               audioplayer = try! AVAudioPlayer(contentsOf: soundURL!)
+               audioplayer.play()
+    }
     
 //    override func didReceiveMemoryWarning()
 //    {
