@@ -12,7 +12,7 @@ class RegisterViewController: UIViewController
 {
 
     
-    
+    var userIndex = -1
     @IBOutlet var UserNameLabel: UILabel!
     @IBOutlet var PasswordLabel: UILabel!
     @IBOutlet var EmailLabel: UILabel!
@@ -121,7 +121,7 @@ class RegisterViewController: UIViewController
         
         
         
-        let user = Users(userName: username, Password: password, Email: email, Phone: phone)
+        let user = Users(userName: username, Password: password, Email: email, Phone: phone, CheckIn:"", CheckOut: "", bookingDetail: [String]())
         
         var isExist = false
         for i in Users.usersData
@@ -174,16 +174,22 @@ class RegisterViewController: UIViewController
               }
         
         var isExist = false
+        userIndex = -1
         for i in Users.usersData
         {
+            userIndex += 1
         if username == i.userName
         {   isExist = true
             if i.Password == password
               {
-                isMatched = true; break
+                isMatched = true
+                Users.currentUserIndex = userIndex
+                break
               }
+            
              
         }
+            
         }
         
         
@@ -198,7 +204,7 @@ class RegisterViewController: UIViewController
         
         if isMatched{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let roomType = storyboard.instantiateViewController(withIdentifier: "roomType")
+        let roomType = storyboard.instantiateViewController(withIdentifier: "profile")
         self.navigationController?.pushViewController(roomType, animated: true)
         }
         else{
@@ -229,16 +235,23 @@ override func viewWillAppear(_ animated: Bool) {
     
     
     
-    /*
-     @IBAction func SegmentControl(_ sender: UISegmentedControl) {
-     }
+    
+     /*
      // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if let pro = segue.destination as? UserProfile{
+            pro.d_login = self
+            
+            
+        }
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
+    }*/
+    
 
 }

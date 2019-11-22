@@ -15,19 +15,25 @@ struct Users
     var Email: String
     var Phone: String
     
-    var CheckIn: [String] = []
-    var CheckOut: [String] = []
+    var CheckIn = ""
+    var CheckOut = ""
     
-    var bookingDetail: String{
-        
-        return """
-        Guest Name:\(userName)\n
-        Check In: \(CheckIn) - Check Out: \(CheckOut)\n
-        Contact: \(Phone)\n
-        Email: \(Email)
-        """
-        
-    }
+    var bookingDetail = [String]()
+   
+    
     static var usersData = [Users]()
+    static var currentUserIndex = -1
 }
   
+/* {
+       
+       return """
+       Guest Name:\(userName)\n
+       Check In: \(CheckIn) - Check Out: \(CheckOut)\n
+       Contact: \(Phone)\n
+       Email: \(Email)
+       """
+       
+   }
+   
+   var*/

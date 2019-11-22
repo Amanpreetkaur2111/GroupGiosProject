@@ -8,7 +8,9 @@
 
 import UIKit
 
-class UserProfile: UIViewController {
+class UserProfile: UIViewController,UITableViewDataSource,UITableViewDelegate {
+   
+    
 
     @IBOutlet var GreetingLabel: UILabel!
     @IBOutlet var DetailLabel: UITableView!
@@ -21,10 +23,32 @@ class UserProfile: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
       
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Users.usersData[Users.currentUserIndex].bookingDetail.count
+       }
+       
+       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = DetailLabel.dequeueReusableCell(withIdentifier: "Booking"){
+        
+            if let bookingData = cell.viewWithTag(0) as? UITextView{
+                
+                bookingData.text = Users.usersData[Users.currentUserIndex].bookingDetail[indexPath.row]
+                print("user index value")
+                print(Users.currentUserIndex)
+                
+            }
+        
+        return cell
+            
+        }
+        return UITableViewCell()
+        
+       }
 
     /*
     // MARK: - Navigation
