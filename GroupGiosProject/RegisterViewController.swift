@@ -102,12 +102,24 @@ class RegisterViewController: UIViewController
     
     @IBAction func Register(_ sender: UIButton)
     {
-        let username = UserNameTF.text
-        let password = PasswordTF.text
-        let email = EmailTF.text
-        let phone = PhoneTF.text
+        let username = UserNameTF.text!
+        let password = PasswordTF.text!
+        let email = EmailTF.text!
+        let phone = PhoneTF.text!
         
-        let user = Users(userName: username!, Password: password!, Email: email!, Phone: phone!)
+        
+        guard !username.isEmpty && !password.isEmpty && !email.isEmpty && !phone.isEmpty else
+        {
+            let alert = UIAlertController(title: "Empty Fields", message: "All fields must be filled", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        
+        
+        
+        let user = Users(userName: username, Password: password, Email: email, Phone: phone)
         
         var isExist = false
         for i in Users.usersData
@@ -124,6 +136,7 @@ class RegisterViewController: UIViewController
             let alert = UIAlertController(title: "UserName already exists", message: "Enter another UserName", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alert,animated: true,completion: nil)
+            return
         }
         else
         {
@@ -132,7 +145,13 @@ class RegisterViewController: UIViewController
             PasswordTF.text = nil
             EmailTF.text = nil
             PhoneTF.text = nil
-         }
+            
+        }
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let roomType = storyboard.instantiateViewController(withIdentifier: "roomType")
+        self.navigationController?.pushViewController(roomType, animated: true)
+       
     }
     
     @IBAction func signIn(_ sender: UIButton)
@@ -154,9 +173,12 @@ class RegisterViewController: UIViewController
             let alert = UIAlertController(title: "UserName does not exist", message: "SignUp for new account", preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alert,animated: true,completion: nil)
+            return
         }
         
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let roomType = storyboard.instantiateViewController(withIdentifier: "roomType")
+        self.navigationController?.pushViewController(roomType, animated: true)
         
         
     }
