@@ -147,6 +147,10 @@ class RegisterViewController: UIViewController
             PhoneTF.text = nil
             
         }
+        let alert = UIAlertController(title: "Successfully Registered ", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert,animated: true,completion: nil)
+        return
 
         
        
@@ -207,14 +211,6 @@ class RegisterViewController: UIViewController
     
     
     
-    
-//    @IBAction func Display(_ sender: Any)
-//    {
-//        for item in users
-//        {
-//            print(item)
-//        }
-//    }
     
     
     
