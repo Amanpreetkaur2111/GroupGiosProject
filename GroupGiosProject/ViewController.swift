@@ -21,23 +21,29 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     
         BookNowButton.isHidden = false
-        assignbackground()
+//        assignbackground()
     }
     
     
-     func assignbackground(){
-        let background = UIImage(named: "back")
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode = UIView.ContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background
-        imageView.center = view.center
-        view.addSubview(imageView)
-        self.view.sendSubviewToBack(imageView)
+//     func assignbackground(){
+//       let background = UIImage(named: "back")
+//        var imageView : UIImageView!
+//       imageView = UIImageView(frame: view.bounds)
+//        imageView.contentMode = UIView.ContentMode.scaleAspectFill
+//        imageView.clipsToBounds = true
+//        imageView.image = background
+//       imageView.center = view.center
+//       view.addSubview(imageView)
+//        self.view.sendSubviewToBack(imageView)
+//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setToolbarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
-    
- 
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setToolbarHidden(false, animated: false)
+         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 }
 

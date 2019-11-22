@@ -49,6 +49,8 @@ class RegisterViewController: UIViewController
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewtapped))
         self.view.addGestureRecognizer(tapGesture)
+        
+        segmentCon.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
     }
     
     
@@ -206,10 +208,22 @@ class RegisterViewController: UIViewController
             return
             
         }
+  
+        
         
     }
     
-    
+override func viewWillAppear(_ animated: Bool) {
+    self.navigationController?.setToolbarHidden(true, animated: false)
+    self.navigationController?.setNavigationBarHidden(true, animated: false)
+      
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+      self.navigationController?.setToolbarHidden(false, animated: false)
+     self.navigationController?.setNavigationBarHidden(false, animated: false)
+      
+    }
     
     
     
