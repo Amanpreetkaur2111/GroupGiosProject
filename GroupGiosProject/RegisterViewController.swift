@@ -148,25 +148,39 @@ class RegisterViewController: UIViewController
             
         }
 
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let roomType = storyboard.instantiateViewController(withIdentifier: "roomType")
-        self.navigationController?.pushViewController(roomType, animated: true)
+        
        
     }
     
     @IBAction func signIn(_ sender: UIButton)
     {
         
-        let username = UserNameTF.text
+        let username = UserNameTF.text!
+        let password = PasswordTF.text!
+        var isMatched = false
+        
+        guard !username.isEmpty && !password.isEmpty else
+              {
+                  let alert = UIAlertController(title: "Empty Fields", message: "All fields must be filled", preferredStyle: .alert)
+                  alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                  self.present(alert, animated: true, completion: nil)
+                  return
+              }
+        
         var isExist = false
         for i in Users.usersData
         {
         if username == i.userName
-        {
-        isExist = true
+        {   isExist = true
+            if i.Password == password
+              {
+                isMatched = true; break
+              }
+             
         }
-            
         }
+        
+        
         
         if !isExist
         {
@@ -176,10 +190,18 @@ class RegisterViewController: UIViewController
             return
         }
         
+        if isMatched{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let roomType = storyboard.instantiateViewController(withIdentifier: "roomType")
         self.navigationController?.pushViewController(roomType, animated: true)
-        
+        }
+        else{
+            let alert = UIAlertController(title: "Wrong Password", message: "Enter correct password", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert,animated: true,completion: nil)
+            return
+            
+        }
         
     }
     
