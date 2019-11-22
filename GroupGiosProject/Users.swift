@@ -14,6 +14,20 @@ struct Users
     var Password: String
     var Email: String
     var Phone: String
+    
+    var CheckIn: [String] = []
+    var CheckOut: [String] = []
+    
+    var bookingDetail: String{
+        
+        return """
+        Guest Name:\(userName)\n
+        Check In: \(CheckIn) - Check Out: \(CheckOut)\n
+        Contact: \(Phone)\n
+        Email: \(Email)
+        """
+        
+    }
     static var usersData = [Users]()
 }
   

@@ -19,6 +19,9 @@
 		9B57E87E238863E300BF8D9B /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B57E87D238863E300BF8D9B /* background1.jpg */; };
 		9B57E8802388687200BF8D9B /* A.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9B57E87F2388687200BF8D9B /* A.jpeg */; };
 		9B57E88223886A5000BF8D9B /* a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B57E88123886A5000BF8D9B /* a.jpg */; };
+		9B57E8842388814700BF8D9B /* hotel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B57E8832388814700BF8D9B /* hotel.jpg */; };
+		9B57E8862388830C00BF8D9B /* h.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B57E8852388830C00BF8D9B /* h.jpg */; };
+		9B57E8882388886A00BF8D9B /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B57E8872388886A00BF8D9B /* UserProfile.swift */; };
 		9B75BC9323870B09003E02F5 /* b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B75BC9223870B09003E02F5 /* b.jpg */; };
 		9B75BC952387471F003E02F5 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B75BC942387471F003E02F5 /* win.mp3 */; };
 		9B88DC4623834CB000B34B3E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88DC4523834CB000B34B3E /* RegisterViewController.swift */; };
@@ -62,6 +65,9 @@
 		9B57E87D238863E300BF8D9B /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
 		9B57E87F2388687200BF8D9B /* A.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = A.jpeg; sourceTree = "<group>"; };
 		9B57E88123886A5000BF8D9B /* a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a.jpg; sourceTree = "<group>"; };
+		9B57E8832388814700BF8D9B /* hotel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hotel.jpg; sourceTree = "<group>"; };
+		9B57E8852388830C00BF8D9B /* h.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h.jpg; sourceTree = "<group>"; };
+		9B57E8872388886A00BF8D9B /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		9B75BC9223870B09003E02F5 /* b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b.jpg; sourceTree = "<group>"; };
 		9B75BC942387471F003E02F5 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 		9B88DC4523834CB000B34B3E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 				9B56B65D238323F7002AED67 /* AppDelegate.swift */,
 				9B56B65F238323F7002AED67 /* SceneDelegate.swift */,
 				9B56B661238323F7002AED67 /* ViewController.swift */,
+				9B57E8872388886A00BF8D9B /* UserProfile.swift */,
 				9B88DC4523834CB000B34B3E /* RegisterViewController.swift */,
 				9B02252C2384587700694AAF /* Users.swift */,
 				9B56B663238323F7002AED67 /* Main.storyboard */,
@@ -144,6 +151,8 @@
 		9B9E86DC2385B69E00102C3B /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				9B57E8852388830C00BF8D9B /* h.jpg */,
+				9B57E8832388814700BF8D9B /* hotel.jpg */,
 				9B57E88123886A5000BF8D9B /* a.jpg */,
 				9B75BC942387471F003E02F5 /* win.mp3 */,
 				9B57E87F2388687200BF8D9B /* A.jpeg */,
@@ -244,6 +253,7 @@
 				9B9E86F52385B6B000102C3B /* C4.jpg in Resources */,
 				9B9E86F82385B6B000102C3B /* C2.jpg in Resources */,
 				9B9E86EF2385B6B000102C3B /* D3.jpg in Resources */,
+				9B57E8842388814700BF8D9B /* hotel.jpg in Resources */,
 				9B9E86F92385B6B000102C3B /* S4.jpg in Resources */,
 				9B75BC952387471F003E02F5 /* win.mp3 in Resources */,
 				9B57E88223886A5000BF8D9B /* a.jpg in Resources */,
@@ -252,6 +262,7 @@
 				9B9E86F72385B6B000102C3B /* D1.jpg in Resources */,
 				9B9E86F12385B6B000102C3B /* tick.png in Resources */,
 				9B9E86FA2385B6B000102C3B /* D2.jpg in Resources */,
+				9B57E8862388830C00BF8D9B /* h.jpg in Resources */,
 				9B9E86F22385B6B000102C3B /* S2.jpg in Resources */,
 				9B9E86EE2385B6B000102C3B /* ST2.jpg in Resources */,
 				9B56B667238323F7002AED67 /* Assets.xcassets in Resources */,
@@ -272,6 +283,7 @@
 				9B9E86D5238597C100102C3B /* PictureViewController.swift in Sources */,
 				9B56B65E238323F7002AED67 /* AppDelegate.swift in Sources */,
 				9BA8E6982384B306005B4D6B /* roomstructure.swift in Sources */,
+				9B57E8882388886A00BF8D9B /* UserProfile.swift in Sources */,
 				9B02252D2384587700694AAF /* Users.swift in Sources */,
 				9B56B660238323F7002AED67 /* SceneDelegate.swift in Sources */,
 				9BA8E6962384B1A4005B4D6B /* RoomTypeTableViewController.swift in Sources */,
