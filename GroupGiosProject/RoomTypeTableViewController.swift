@@ -20,6 +20,8 @@ class RoomTypeTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
     }
 
     // MARK: - Table view data source
@@ -39,7 +41,12 @@ class RoomTypeTableViewController: UITableViewController {
     {
     if let cell = tableView.dequeueReusableCell(withIdentifier: "Room")
     {
-    cell.textLabel?.text = Rooms.roomTypes[indexPath.row]
+        cell.contentView.backgroundColor = #colorLiteral(red: 0, green: 0.3912829757, blue: 0.4861266017, alpha: 1)
+        cell.textLabel?.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+
+        
+        cell.textLabel?.text = Rooms.roomTypes[indexPath.row]
+       
     
     return cell
             
