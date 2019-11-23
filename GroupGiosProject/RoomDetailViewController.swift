@@ -78,6 +78,7 @@ var audioplayer: AVAudioPlayer!
         let Dateformatter = DateFormatter()
         Dateformatter.dateFormat = "MM/dd/yyyy"
         CheckIn.text = Dateformatter.string(from: datepicker!.date)
+        Users.usersData[Users.currentUserIndex].CheckIn = CheckIn.text!
        // CheckOut.text = Dateformatter.string(from: datepicker!.date)
         view.endEditing(true)
         
@@ -95,15 +96,35 @@ var audioplayer: AVAudioPlayer!
            Dateformatter.dateFormat = "MM/dd/yyyy"
           
           CheckOut.text = Dateformatter.string(from: datepicker!.date)
+        Users.usersData[Users.currentUserIndex].CheckOut = CheckOut.text!
            view.endEditing(true)
            
        }
     
     
     @IBAction func booksound(_ sender: UIButton) {
-    let soundURL = Bundle.main.url(forResource: "win", withExtension: "mp3")
+        
+    /*let soundURL = Bundle.main.url(forResource: "win", withExtension: "mp3")
                audioplayer = try! AVAudioPlayer(contentsOf: soundURL!)
-               audioplayer.play()
+               audioplayer.play()*/
+        
+        
+        let u = Users.usersData[Users.currentUserIndex]
+        
+        let detail = """
+        Guest Name:\(u.userName)
+        Check In: \(u.CheckIn) - Check Out: \(u.CheckOut)
+        Contact: \(u.Phone)
+        Email: \(u.Email)
+        """
+        
+        Users.usersData[Users.currentUserIndex].bookingDetail.append(detail)
+       
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let roomType = storyboard.instantiateViewController(withIdentifier: "profile")
+        self.navigationController?.pushViewController(roomType, animated: true)
     }
     
 //    override func didReceiveMemoryWarning()
