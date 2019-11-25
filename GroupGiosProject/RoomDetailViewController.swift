@@ -19,33 +19,33 @@ var audioplayer: AVAudioPlayer!
     
     @IBOutlet var CheckOut: UITextField!
     
-    private var datepicker: UIDatePicker?
-    
+    private var datepicker1: UIDatePicker?
+    private var datepicker2: UIDatePicker?
     var RoomDelegate: PictureViewController?
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        datepicker = UIDatePicker()
-        datepicker?.datePickerMode = .date
+        datepicker1 = UIDatePicker()
+        datepicker1?.datePickerMode = .date
         
-        datepicker?.addTarget(self, action: #selector(RoomDetailViewController.dateChanged(datePicker:)), for: .valueChanged)
+        datepicker1?.addTarget(self, action: #selector(RoomDetailViewController.dateChanged(datePicker:)), for: .valueChanged)
         
         let tapGester = UITapGestureRecognizer(target: self, action: #selector(RoomDetailViewController.viewTapped(gestureRecognizer:)))
             view.addGestureRecognizer(tapGester)
-       CheckIn.inputView = datepicker
+       CheckIn.inputView = datepicker1
        
         
         
         
-               datepicker = UIDatePicker()
-               datepicker?.datePickerMode = .date
+               datepicker2 = UIDatePicker()
+               datepicker2?.datePickerMode = .date
                
-               datepicker?.addTarget(self, action: #selector(RoomDetailViewController.dateChanged1(datePicker:)), for: .valueChanged)
+        datepicker2?.addTarget(self, action: #selector(RoomDetailViewController.dateChanged1(datePicker:)), for: .valueChanged)
                
                let tapGester1 = UITapGestureRecognizer(target: self, action: #selector(RoomDetailViewController.viewTapped1(gestureRecognizer:)))
                    view.addGestureRecognizer(tapGester1)
-                  CheckOut.inputView = datepicker
+                  CheckOut.inputView = datepicker2
         
        
         let i_name =  RoomDelegate!.cuurentImageName
@@ -77,7 +77,7 @@ var audioplayer: AVAudioPlayer!
     {
         let Dateformatter = DateFormatter()
         Dateformatter.dateFormat = "MM/dd/yyyy"
-        CheckIn.text = Dateformatter.string(from: datepicker!.date)
+        CheckIn.text = Dateformatter.string(from: datepicker1!.date)
         Users.usersData[Users.currentUserIndex].CheckIn = CheckIn.text!
        // CheckOut.text = Dateformatter.string(from: datepicker!.date)
         view.endEditing(true)
@@ -95,7 +95,7 @@ var audioplayer: AVAudioPlayer!
            let Dateformatter = DateFormatter()
            Dateformatter.dateFormat = "MM/dd/yyyy"
           
-          CheckOut.text = Dateformatter.string(from: datepicker!.date)
+          CheckOut.text = Dateformatter.string(from: datepicker2!.date)
         Users.usersData[Users.currentUserIndex].CheckOut = CheckOut.text!
            view.endEditing(true)
            

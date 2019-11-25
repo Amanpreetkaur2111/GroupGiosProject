@@ -23,6 +23,7 @@ class UserProfile: UIViewController,UITableViewDataSource,UITableViewDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        GreetingLabel.text = "Hi \(Users.usersData[Users.currentUserIndex].userName)"
         
         
       
@@ -31,10 +32,17 @@ class UserProfile: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         DetailLabel.reloadData()
+        
+        if !Users.usersData[Users.currentUserIndex].bookingDetail.isEmpty{
+            UserMessageLabel.isHidden = true
+        }
+        else{
+            UserMessageLabel.isHidden = false
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("no of rows function")
+       
         return Users.usersData[Users.currentUserIndex].bookingDetail.count
        }
        
@@ -43,17 +51,17 @@ class UserProfile: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        print("inside function")
+        
         if let cell = DetailLabel.dequeueReusableCell(withIdentifier: "Booking"){
-        print("inside cell")
+        
         
             if let bookingData = cell.contentView.viewWithTag(1) as? UITextView{
-                print("inside booking")
+                
                 
                 bookingData.text = Users.usersData[Users.currentUserIndex].bookingDetail[indexPath.row]
-                print("user index value")
                 
-                print(Users.currentUserIndex)
+                
+               
                 
             }
         
