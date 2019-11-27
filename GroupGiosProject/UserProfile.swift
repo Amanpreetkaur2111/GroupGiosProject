@@ -18,25 +18,26 @@ class UserProfile: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet var StayLabel: UIButton!
     
     
-    
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        GreetingLabel.text = "         Hi \(Users.usersData[Users.currentUserIndex].userName)"
+     
+        GreetingLabel.text = " Hi \(Users.usersData[Users.currentUserIndex].userName)"
         
-        
-      
         // Do any additional setup after loading the view.
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
         DetailLabel.reloadData()
         
         if !Users.usersData[Users.currentUserIndex].bookingDetail.isEmpty{
             UserMessageLabel.isHidden = true
-        }
-        else{
+    }
+    else{
             UserMessageLabel.isHidden = false
         }
     }
