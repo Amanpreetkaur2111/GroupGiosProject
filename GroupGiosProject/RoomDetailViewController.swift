@@ -15,13 +15,15 @@ var audioplayer: AVAudioPlayer!
     
     
     @IBOutlet var price_Label: UILabel!
-    @IBOutlet var CheckIn: UITextField!
     
+    @IBOutlet var CheckIn: UITextField!
     @IBOutlet var CheckOut: UITextField!
     
     private var datepicker1: UIDatePicker?
     private var datepicker2: UIDatePicker?
+    
     var RoomDelegate: PictureViewController?
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -32,20 +34,20 @@ var audioplayer: AVAudioPlayer!
         datepicker1?.addTarget(self, action: #selector(RoomDetailViewController.dateChanged(datePicker:)), for: .valueChanged)
         
         let tapGester = UITapGestureRecognizer(target: self, action: #selector(RoomDetailViewController.viewTapped(gestureRecognizer:)))
-            view.addGestureRecognizer(tapGester)
-       CheckIn.inputView = datepicker1
+        view.addGestureRecognizer(tapGester)
+        CheckIn.inputView = datepicker1
        
         
         
         
-               datepicker2 = UIDatePicker()
-               datepicker2?.datePickerMode = .date
+        datepicker2 = UIDatePicker()
+        datepicker2?.datePickerMode = .date
                
         datepicker2?.addTarget(self, action: #selector(RoomDetailViewController.dateChanged1(datePicker:)), for: .valueChanged)
                
-               let tapGester1 = UITapGestureRecognizer(target: self, action: #selector(RoomDetailViewController.viewTapped1(gestureRecognizer:)))
-                   view.addGestureRecognizer(tapGester1)
-                  CheckOut.inputView = datepicker2
+        let tapGester1 = UITapGestureRecognizer(target: self, action: #selector(RoomDetailViewController.viewTapped1(gestureRecognizer:)))
+        view.addGestureRecognizer(tapGester1)
+        CheckOut.inputView = datepicker2
         
        
         let i_name =  RoomDelegate!.cuurentImageName
@@ -54,10 +56,7 @@ var audioplayer: AVAudioPlayer!
         price_Label.text = RoomDelegate!.Price[(RoomDelegate?.ImageDelegate!.RType)!][RoomDelegate!.currIndex]
         
         
-        
         // Do any additional setup after loading the view.
-        
-        
         }
    
 //    if CheckIn.text == CheckOut.text
@@ -73,6 +72,7 @@ var audioplayer: AVAudioPlayer!
         view.endEditing(true)
     }
     
+    
     @objc func dateChanged(datePicker: UIDatePicker)
     {
         let Dateformatter = DateFormatter()
@@ -81,8 +81,8 @@ var audioplayer: AVAudioPlayer!
         Users.usersData[Users.currentUserIndex].CheckIn = CheckIn.text!
        // CheckOut.text = Dateformatter.string(from: datepicker!.date)
         view.endEditing(true)
-        
     }
+    
     
     
     @objc func viewTapped1(gestureRecognizer: UITapGestureRecognizer)
@@ -90,25 +90,23 @@ var audioplayer: AVAudioPlayer!
            view.endEditing(true)
        }
        
-       @objc func dateChanged1(datePicker: UIDatePicker)
-       {
+    @objc func dateChanged1(datePicker: UIDatePicker)
+      {
            let Dateformatter = DateFormatter()
            Dateformatter.dateFormat = "MM/dd/yyyy"
           
-          CheckOut.text = Dateformatter.string(from: datepicker2!.date)
-        Users.usersData[Users.currentUserIndex].CheckOut = CheckOut.text!
+           CheckOut.text = Dateformatter.string(from: datepicker2!.date)
+           Users.usersData[Users.currentUserIndex].CheckOut = CheckOut.text!
            view.endEditing(true)
-           
-       }
+      }
     
     
-    @IBAction func booksound(_ sender: UIButton) {
-        
-    /*let soundURL = Bundle.main.url(forResource: "win", withExtension: "mp3")
+    
+    @IBAction func booksound(_ sender: UIButton)
+    {
+        /*let soundURL = Bundle.main.url(forResource: "win", withExtension: "mp3")
                audioplayer = try! AVAudioPlayer(contentsOf: soundURL!)
                audioplayer.play()*/
-        
-        
         let u = Users.usersData[Users.currentUserIndex]
         
         let detail = """
@@ -120,17 +118,13 @@ var audioplayer: AVAudioPlayer!
         
         Users.usersData[Users.currentUserIndex].bookingDetail.append(detail)
        
-        
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let roomType = storyboard.instantiateViewController(withIdentifier: "profile")
         self.navigationController?.pushViewController(roomType, animated: true)
+        
     }
     
-//    override func didReceiveMemoryWarning()
-//    {
-//        super.didReceiveMemoryWarning()
-//    }
+
     /*
     // MARK: - Navigation
 
