@@ -23,7 +23,7 @@ class UserProfile: UIViewController,UITableViewDataSource,UITableViewDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        GreetingLabel.text = "Hi \(Users.usersData[Users.currentUserIndex].userName)"
+        GreetingLabel.text = "         Hi \(Users.usersData[Users.currentUserIndex].userName)"
         
         
       
@@ -72,6 +72,14 @@ class UserProfile: UIViewController,UITableViewDataSource,UITableViewDelegate {
         
        }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let c_action = UIContextualAction(style: .destructive, title: "Cancel Booking") { (action, V, _) in
+            Users.usersData[Users.currentUserIndex].bookingDetail.remove(at: indexPath.row)
+            self.DetailLabel.reloadData()
+        }
+        
+        return UISwipeActionsConfiguration(actions: [c_action])
+    }
     
 
     /*
