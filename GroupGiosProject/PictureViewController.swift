@@ -20,29 +20,31 @@ class PictureViewController: UIViewController, UICollectionViewDelegate, UIColle
     var ImageDelegate: RoomTypeTableViewController?
     var cuurentImageName = ""
    
+    
       override func viewDidLoad()
-      {
+       {
         super.viewDidLoad()
 //        (mypic as! Picture).setImage(s: ImageArray[ImageDelegate!.RType])
 
         // Do any additional setup after loading the view.
-      }
+       }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
       {
         return ImageArray[ImageDelegate!.RType].count
       }
     
+    
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
       {
     
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Picture
-        {
+         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Picture
+         {
         
-            cell.Images?.image = UIImage(named: ImageArray[ImageDelegate!.RType][indexPath.row])
-            return cell
-            
-        }
+         cell.Images?.image = UIImage(named: ImageArray[ImageDelegate!.RType][indexPath.row])
+         return cell
+         }
         
     return UICollectionViewCell()
         
@@ -54,29 +56,24 @@ class PictureViewController: UIViewController, UICollectionViewDelegate, UIColle
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if let RoomView = segue.destination as? RoomDetailViewController
         {
             RoomView.RoomDelegate = self
             
-            if let pic = sender as? Picture{
+            if let pic = sender as? Picture
+            {
                
-                let index = coll_View.indexPath(for: pic)?.row
-                
-                
-                currIndex = index!
-                cuurentImageName = ImageArray[ImageDelegate!.RType][index!]
-                
+            let index = coll_View.indexPath(for: pic)?.row
+            currIndex = index!
+            cuurentImageName = ImageArray[ImageDelegate!.RType][index!]
             }
         }
         
         
        //back let index = view.
-        
-        
     }
-    
-
 }

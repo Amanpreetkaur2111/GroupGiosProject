@@ -11,7 +11,6 @@ import UIKit
 class RegisterViewController: UIViewController
 {
 
-    
     var userIndex = -1
     @IBOutlet var UserNameLabel: UILabel!
     @IBOutlet var PasswordLabel: UILabel!
@@ -179,7 +178,8 @@ class RegisterViewController: UIViewController
         {
             userIndex += 1
         if username == i.userName
-        {   isExist = true
+        {
+            isExist = true
             if i.Password == password
               {
                 isMatched = true
@@ -187,9 +187,7 @@ class RegisterViewController: UIViewController
                 break
               }
             
-             
         }
-            
         }
         
         
@@ -214,21 +212,19 @@ class RegisterViewController: UIViewController
             return
             
         }
-  
-        
-        
-    }
+  }
     
-override func viewWillAppear(_ animated: Bool) {
-    self.navigationController?.setToolbarHidden(true, animated: false)
-    self.navigationController?.setNavigationBarHidden(true, animated: false)
-      
+    override func viewWillAppear(_ animated: Bool)
+    {
+     self.navigationController?.setToolbarHidden(true, animated: false)
+     self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
       self.navigationController?.setToolbarHidden(false, animated: false)
-     self.navigationController?.setNavigationBarHidden(false, animated: false)
-      
+      self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     

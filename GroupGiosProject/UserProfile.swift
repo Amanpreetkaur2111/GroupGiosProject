@@ -19,14 +19,12 @@ class UserProfile: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     
     override func viewDidLoad()
-    {
+     {
         super.viewDidLoad()
-     
-        GreetingLabel.text = " Hi \(Users.usersData[Users.currentUserIndex].userName)"
+        GreetingLabel.text = " Hi  \(Users.usersData[Users.currentUserIndex].userName)"
         
         // Do any additional setup after loading the view.
-        
-    }
+     }
     
     
     
@@ -34,53 +32,59 @@ class UserProfile: UIViewController,UITableViewDataSource,UITableViewDelegate {
     {
         DetailLabel.reloadData()
         
-        if !Users.usersData[Users.currentUserIndex].bookingDetail.isEmpty{
+        if !Users.usersData[Users.currentUserIndex].bookingDetail.isEmpty
+        {
             UserMessageLabel.isHidden = true
-    }
-    else{
-            UserMessageLabel.isHidden = false
+        }
+        else
+        {
+        UserMessageLabel.isHidden = false
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return Users.usersData[Users.currentUserIndex].bookingDetail.count
-       }
-       
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150.0
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+     {
+      return Users.usersData[Users.currentUserIndex].bookingDetail.count
+     }
+      
+    
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+       return 150.0
     }
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         
+         if let cell = DetailLabel.dequeueReusableCell(withIdentifier: "Booking")
+          {
         
-        if let cell = DetailLabel.dequeueReusableCell(withIdentifier: "Booking"){
-        
-        
-            if let bookingData = cell.contentView.viewWithTag(1) as? UITextView{
-                
-                
-                bookingData.text = Users.usersData[Users.currentUserIndex].bookingDetail[indexPath.row]
-                
-                
-               
-                
+            if let bookingData = cell.contentView.viewWithTag(1) as? UITextView
+            {
+            bookingData.text = Users.usersData[Users.currentUserIndex].bookingDetail[indexPath.row]
             }
         
-        return cell
-            
-        }
-        return UITableViewCell()
+          return cell
+          }
         
-       }
+    return UITableViewCell()
+    }
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let c_action = UIContextualAction(style: .destructive, title: "Cancel Booking") { (action, V, _) in
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+        {
+            let c_action = UIContextualAction(style: .destructive, title: "Cancel Booking") { (action, V, _) in
             Users.usersData[Users.currentUserIndex].bookingDetail.remove(at: indexPath.row)
             self.DetailLabel.reloadData()
         }
         
         return UISwipeActionsConfiguration(actions: [c_action])
-    }
+        }
     
 
     /*

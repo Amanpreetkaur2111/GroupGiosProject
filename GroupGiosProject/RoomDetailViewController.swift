@@ -11,9 +11,8 @@ import AVFoundation
 
 class RoomDetailViewController: UIViewController {
 var audioplayer: AVAudioPlayer!
+    
     @IBOutlet var room_Image: UIImageView!
-    
-    
     @IBOutlet var price_Label: UILabel!
     
     @IBOutlet var CheckIn: UITextField!
@@ -23,6 +22,7 @@ var audioplayer: AVAudioPlayer!
     private var datepicker2: UIDatePicker?
     
     var RoomDelegate: PictureViewController?
+    
     
     override func viewDidLoad()
     {
@@ -37,8 +37,6 @@ var audioplayer: AVAudioPlayer!
         view.addGestureRecognizer(tapGester)
         CheckIn.inputView = datepicker1
        
-        
-        
         
         datepicker2 = UIDatePicker()
         datepicker2?.datePickerMode = .date
@@ -111,7 +109,8 @@ var audioplayer: AVAudioPlayer!
         
         let detail = """
         Guest Name:\(u.userName)
-        Check In: \(u.CheckIn) - Check Out: \(u.CheckOut)
+        Check In: \(u.CheckIn)
+        Check Out: \(u.CheckOut)
         Contact: \(u.Phone)
         Email: \(u.Email)
         """
